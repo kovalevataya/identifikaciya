@@ -134,6 +134,15 @@
   figure {
     margin: 1.75rem 0 2rem;
   }
+  figure.video { margin-top: 0; }
+  figure.video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: var(--shadow);
+  }
   figure img {
     display: block;
     width: 100%;
@@ -318,6 +327,16 @@
   .doclink b { display: block; color: var(--ink); margin-bottom: .2rem; }
   .doclink span { color: var(--muted); font-size: .92rem; }
 
+  /* Quiz */
+  .quiz-frame {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: var(--card);
+    margin: 1.5rem 0 0;
+  }
+
   /* Footer */
   .fin {
     margin-top: 3.5rem;
@@ -346,6 +365,11 @@
   </header>
 
   <main>
+
+    <figure class="video">
+      <video controls preload="metadata" src="identifikaciya-video.mp4"></video>
+      <figcaption>Видеоверсия обучения — 12 минут</figcaption>
+    </figure>
 
     <h2>Начнём с истории культуры</h2>
     <p>Перед вами Эдуард <strong>Мане</strong>. Он родился в 1832 году, был французским художником-импрессионистом, жил в Париже.</p>
@@ -520,6 +544,13 @@
       <p><strong>Спасибо!</strong></p>
       <p class="sig">Клиника «Три сестры» · Обучение по идентификации пациентов</p>
     </div>
+
+    <section>
+      <h2>Тест: проверьте себя</h2>
+      <p>В конце обучения — короткий тест: укажите ФИО, выберите свой департамент и ответьте на 5 вопросов. Ответы автоматически придут команде качества.</p>
+      <iframe class="quiz-frame" src="https://forms.yandex.ru/cloud/6a550490e010db1329879b09/?iframe=1" name="ya-form-6a550490e010db1329879b09" width="100%" height="1100" frameborder="0" title="Тест по идентификации пациентов"></iframe>
+    </section>
+    <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
 
   </main>
 </div>

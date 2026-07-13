@@ -327,13 +327,15 @@
   .doclink b { display: block; color: var(--ink); margin-bottom: .2rem; }
   .doclink span { color: var(--muted); font-size: .92rem; }
 
-  /* Quiz */
+  /* Quiz: фон всегда светлый — форма Яндекса рисует тёмный текст
+     на прозрачном фоне и в тёмной теме становится нечитаемой */
   .quiz-frame {
     display: block;
     width: 100%;
     border: 1px solid var(--rule);
     border-radius: 10px;
-    background: var(--card);
+    background: #FFFFFF;
+    padding: .5rem;
     margin: 1.5rem 0 0;
   }
 
